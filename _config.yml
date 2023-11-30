@@ -20,7 +20,7 @@ plugins:
 header_pages:
   - contact.md
   - about.md
-  #- _pages/contact.md
+  - _pages/test.md
 
 
 # Exclude from processing.
