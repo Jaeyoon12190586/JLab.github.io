@@ -1,15 +1,27 @@
+<!-- 메인 사이트 헤더 컨테이너 및 스타일링 클래스 -->
 <header class="site-header">
 
+    <!-- 헤더 콘텐츠의 너비를 제한하는 래퍼 -->
     <div class="wrapper">
+      
+      <!-- 페이지 경로를 얻기 위한 Liquid 템플릿 코드 -->
       {%- assign default_paths = site.pages | map: "path" -%}
       {%- assign page_paths = site.header_pages | default: default_paths -%}
+
+      <!-- 페이지 제목의 총 크기를 계산하기 위한 Liquid 템플릿 코드 -->
       {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+      
+      <!-- 사이트 제목을 루트 URL에 연결 -->
       <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
   
+      <!-- 페이지 제목이 있는지 확인 -->
       {%- if titles_size > 0 -%}
+
+        <!-- 토글 가능한 체크박스를 사용한 네비게이션 섹션 -->
         <nav class="site-nav">
           <input type="checkbox" id="nav-trigger" class="nav-trigger" />
           <label for="nav-trigger">
+            <!-- SVG 형식의 메뉴 아이콘 -->
             <span class="menu-icon">
               <svg viewBox="0 0 18 15" width="18px" height="15px">
                 <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
@@ -17,15 +29,18 @@
             </span>
           </label>
   
+          <!-- 네비게이션 링크를 위한 컨테이너 -->
           <div class="trigger">
+            <!-- Liquid 템플릿 루프를 통한 네비게이션 링크 생성 -->
             {%- for path in page_paths -%}
               {%- assign my_page = site.pages | where: "path", path | first -%}
               {%- if my_page.title -%}
-              <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+                <!-- 제목과 URL을 사용한 개별 페이지 링크 -->
+                <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
               {%- endif -%}
             {%- endfor -%}
           </div>
         </nav>
       {%- endif -%}
     </div>
-  </header>
+</header>
