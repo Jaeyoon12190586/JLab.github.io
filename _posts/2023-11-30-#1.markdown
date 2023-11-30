@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Welcome to Jekyll!"
+date:   2023-11-30 19:03:02 +0900
+categories: jekyll update
+---
+
+첫 글입니다. 매일 쓰려고 노력할게요
+새로 만들었는데 cs공부랑 역학 정리용으로 쓸 것 같습니다
