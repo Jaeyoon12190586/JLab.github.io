@@ -17,7 +17,7 @@ plugins:
   - jekyll-feed
 
 #header
-heaer_pages:
+header_pages:
   - /index/
   - /about/
   - /contact/
