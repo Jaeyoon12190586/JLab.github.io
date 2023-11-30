@@ -18,9 +18,9 @@ plugins:
 
 #header
 header_pages:
-  - /index/
-  - /about/
-  - /contact/
+  - index.md
+  - about.md
+  - _pages/contact.md
 
 
 # Exclude from processing.
