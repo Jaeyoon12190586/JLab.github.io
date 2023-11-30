@@ -1,26 +1,17 @@
-# Site settings
-title: "JLab"
-email: "12190586@inhu.edu"
-description: >- # this means to ignore newlines until "baseurl:"
-  Hello
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  https://github.com/Jaeyoon12190586
+# Configurations
+title: JLab
+
+author: Jaeyoon
+email: 12190586@inha.edu
+description: >
+
+version: 1.0
+
+url: "https://Jaeyoon12190586.github.io"
+baseurl: "/Jaeyoon" 
+
+github_username:  Jaeyoon12190586
 
 # Build settings
 markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+theme: 
