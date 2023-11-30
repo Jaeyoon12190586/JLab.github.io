@@ -16,6 +16,13 @@ theme: minima
 plugins:
   - jekyll-feed
 
+#header
+heaer_pages:
+  - /index/
+  - /about/
+  - /contact/
+
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
